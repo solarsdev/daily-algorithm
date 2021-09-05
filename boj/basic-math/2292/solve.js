@@ -1,23 +1,11 @@
-const fs = require('fs');
-const input = fs.readFileSync('input').toString().trim();
+const input = require('fs').readFileSync('/dev/stdin');
 
-const n = parseInt(input);
+let range = 1,
+  block = 1;
 
-// 1~1       1
-// 2~7       6
-// 8~19      12
-// 20~37     18
-
-console.log((n - 1) / 6);
-
-console.log(1 + 6 * (n - 1));
-
-//n ===1 16n
-
-let count = 1;
-
-while (num < count) {
-  if (count === 1) {
-  }
+while (block < input) {
+  block += 6 * range;
+  range++;
 }
-const getResult = (num) => {};
+
+console.log(range);
